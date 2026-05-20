@@ -189,8 +189,7 @@ section  {
     display: flex;
     justify-content: space-between;
     gap: 30px;
-    flex-wrap: wrap;
-    justify-content: center;
+   w2d
 }
 
 .footer h2{
@@ -262,3 +261,48 @@ section  {
     letter-spacing: 1px;
 
 }
+
+@media (max-width: 768px) {
+    
+    main {
+        flex-direction: column;  
+        justify-content: center;  
+        align-items: center;      
+        text-align: center;       
+        padding: 40px 20px;       
+        height: auto;             
+        min-height: 100vh;       
+    }
+
+    .lado-izquierdo {
+        max-width: 100%;          
+        margin-bottom: 40px;      
+    }
+
+    main h1 {
+        font-size: 45px;          
+        line-height: 1.1;
+    }
+
+    main p {
+        font-size: 20px;          
+    }
+
+    main button {
+        padding: 15px 30px;       
+        font-size: 18px;
+    }
+
+    .lado-derecho {
+        text-align: center;       
+    }
+
+    .lado-derecho h2 {
+        font-size: 35px;         
+    }
+
+    .lado-derecho h3 {
+        font-size: 24px;          
+    }
+}
+    

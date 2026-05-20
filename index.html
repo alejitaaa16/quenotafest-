@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Que Nota Fest</title>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="iconos/quenotafest.jpg.jpeg" alt="">
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">FESTIVAL</a></li>
+                <li><a href="programa.html">PROGRAMA</a></li>
+                <li><a href="index.html#artistas">ARTISTAS</a></li>
+                <li><a href="alojamiento.html">VIAJA</a></li>
+                <li><a href="index.html">ENTRADAS</a></li>
+                <li><a href="index.html">GALERIA</a></li>
+                <li><a href="index.html">NOTICIAS</a></li>
+                <li><a href="index.html#redes">CONTACTO</a></li>
+                <li><a href="index.html">COMPRAR ENTRADAS</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+
+    <div class="lado-izquierdo">
+        <h1>¡QUE NOTA <br>FEST!</h1>
+        <p>Rock, reguetón y trap en una sola <br>
+            experiencia.</p>
+        <button>COMPRAR ENTRADAS</button>
+    </div>
+
+    <div class="lado-derecho">
+    <h2>Del 11 al 16<br> Septiembre 2026</h2>
+    <h3>Medellín, Colombia</h3>
+    
+    <div id="countdown" class="countdown">
+        <div class="tiempo-box"><span id="dias">00</span><p>Días</p></div>
+        <div class="tiempo-box"><span id="horas">00</span><p>Hrs</p></div>
+        <div class="tiempo-box"><span id="minutos">00</span><p>Min</p></div>
+        <div class="tiempo-box"><span id="segundos">00</span><p>Seg</p></div>
+    </div>
+</div>
+
+    </main>
+
+    <section>
+        <div class="Tarjeta">
+            <img src="iconos/globe.png" alt="globo">
+            <h2>EXPERIENCIA INTERNACIONAL</h2>
+            <p>Artistas de mas de 30 paises</p>
+        </div>
+        <div class="Tarjeta">
+            <img src="iconos/ticket.png" alt="ticket">
+            <h2>ENTRADAS CON DESCUENTO</h2>
+            <p>Preventa disponible por tiempo limitado</p>
+        </div>
+        <div class="Tarjeta">
+            <img src="iconos/avion.png" alt="avion">
+            <h2>PLANIFICA TU VIAJE</h2>
+            <p>Información práctica para viajeros internacionales</p>
+        </div>
+        <div class="Tarjeta">
+            <img src="iconos/hotel.png" alt="hotel">
+            <h2>ALOJAMIENTO Y TRANSPORTE</h2>
+            <p>Opciones recomendadas para tu estancia</p>
+        </div>
+        <div class="Tarjeta">
+            <img src="iconos/camera.png" alt="camera">
+            <h2>GALERIA MULTIMEDIA</h2>
+            <p>Revive los mejores momentos de ediciones anteriores</p>
+        </div>
+    </section>
+
+    <section class="Artistassection" id="artistas">
+        <h1>Artistas Principales</h1>
+        <div class="Artistas">
+            <img src="artistas/karolg.jpg" alt="Karol G">
+            <h3>Karol G</h3>
+        </div>
+        <div class="Artistas">
+            <img src="artistas/fuerzaregida.jpg" alt="Fuerza Regida">
+            <h3>Fuerza <br>Regida</h3>
+        </div>
+
+        <div class="Artistas">
+            <img src="artistas/arianagrande.webp" alt="Ariana Grande">
+            <h3>Ariana <br>Grande</h3>
+        </div>
+        <div class="Artistas">
+            <img src="artistas/Feid.webp" alt="Feid">
+            <h3>Feid</h3>
+        </div>
+    </section>
+
+    <footer class="footer">
+
+    <div class="logo">
+        <img src="iconos/quenotafest.jpg.jpeg" alt="">
+    </div>
+
+    <div class="enlaces">
+        <h2>ENLACES RAPIDOS</h2>
+
+        <div class="links">
+            <div>
+                <p>Programa</p>
+                <p>Artistas</p>
+                <p>Viaja</p>
+            </div>
+
+            <div>
+                <p>Entradas</p>
+                <p>Noticias</p>
+                <p>Contacto</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="informacion">
+        <h2>INFORMACIÓN</h2>
+
+        <p>Preguntas frecuentes</p>
+        <p>Terminos y condiciones</p>
+        <p>Politicas de privacidad</p>
+    </div>
+
+    <div class="siguenos">
+        <h2>SÍGUENOS</h2>
+
+        <div class="redes" id="redes">
+            <div>
+                <img src="iconos/instagram-white-icon.webp" alt="Instagram">
+            </div>
+            <div>
+                <img src="iconos/facebook-app-round-white-icon.webp" alt="Facebook">
+            </div>
+            <div>
+                <img src="iconos/youtube-app-white-icon.webp" alt="YouTube">
+            </div>
+            <div>
+                <img src="iconos/tiktok-simplified-white-icon.webp" alt="TikTok">
+            </div>
+        </div>
+    </div>
+    </footer>
+
+    <script>
+        
+        const fechaEvento = new Date('September 11, 2026 00:00:00').getTime();
+
+        const contador = setInterval(function() {
+            const ahora = new Date().getTime();
+            const distancia = fechaEvento - ahora;
+
+            // Cálculos de tiempo para días, horas, minutos y segundos
+            const dias = Math.floor(distancia / (1000 * 60 * 60 * 24));
+            const horas = Math.floor((distancia % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const minutos = Math.floor((distancia % (1000 * 60 * 60)) / (1000 * 60));
+            const segundos = Math.floor((distancia % (1000 * 60)) / 1000);
+
+            // Insertar los resultados en el HTML
+            document.getElementById('dias').innerText = dias < 10 ? '0' + dias : dias;
+            document.getElementById('horas').innerText = horas < 10 ? '0' + horas : horas;
+            document.getElementById('minutos').innerText = minutos < 10 ? '0' + minutos : minutos;
+            document.getElementById('segundos').innerText = segundos < 10 ? '0' + segundos : segundos;
+
+            // Si la cuenta regresiva termina
+            if (distancia < 0) {
+                clearInterval(contador);
+                document.getElementById('countdown').innerHTML = "<h3 style='color: #d94b7b;'>¡EL FESTIVAL YA EMPEZÓ!</h3>";
+            }
+        }, 1000);
+    </script>
+
+</body>
+</html>

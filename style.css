@@ -264,14 +264,52 @@ section  {
 
 @media (max-width: 768px) {
     
+    /* --- Ajustes del Menú de Navegación --- */
+    header {
+        flex-direction: column;    /* Pone el logo arriba y el menú abajo */
+        gap: 15px;
+        padding: 15px;
+    }
+
+    nav {
+        width: 100%;
+    }
+
+    nav ul {
+        flex-direction: column;    /* Los enlaces ahora van uno abajo del otro */
+        gap: 12px;                 /* Espacio cómodo entre enlaces */
+        width: 100%;
+        text-align: center;
+        padding: 10px 0;
+    }
+
+    nav ul li {
+        width: 100%;               /* Cada enlace ocupa todo el ancho */
+    }
+
+    nav ul li a {
+        display: block;
+        padding: 8px 0;
+        font-size: 14px;           /* Un pelín más pequeño para que no sature */
+    }
+
+    /* El último botón ("COMPRAR ENTRADAS") en el menú */
+    ul li:last-child a {
+        display: inline-block;     /* No queremos que el botón rosa ocupe todo el ancho */
+        width: auto;
+        margin-top: 5px;
+        padding: 8px 20px;
+    }
+
+    /* --- Ajustes del Sección Main (Lo que ya teníamos) --- */
     main {
-        flex-direction: column;  
+        flex-direction: column;   
         justify-content: center;  
         align-items: center;      
         text-align: center;       
         padding: 40px 20px;       
         height: auto;             
-        min-height: 100vh;       
+        min-height: 100vh;        
     }
 
     .lado-izquierdo {
@@ -298,11 +336,10 @@ section  {
     }
 
     .lado-derecho h2 {
-        font-size: 35px;         
+        font-size: 35px;          
     }
 
     .lado-derecho h3 {
         font-size: 24px;          
     }
 }
-    

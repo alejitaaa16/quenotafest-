@@ -262,84 +262,77 @@ section  {
 
 }
 
+
 @media (max-width: 768px) {
     
-    /* --- Ajustes del Menú de Navegación --- */
     header {
-        flex-direction: column;    /* Pone el logo arriba y el menú abajo */
-        gap: 15px;
-        padding: 15px;
+        flex-direction: row; /* Mantiene logo y hamburguesa en la misma línea */
+        justify-content: space-between;
+        align-items: center;
+        padding: 15px 20px;
+        position: relative;
     }
 
+    /* Mostrar el botón hamburguesa solo en celulares */
+    .menu-hamburger {
+        display: flex;
+    }
+
+    /* Ocultamos el menú por defecto en celular */
     nav {
+        display: none; 
+        position: absolute;
+        top: 100%; /* Aparece justo debajo del header */
+        left: 0;
         width: 100%;
+        background-color: black;
+        padding: 20px 0;
+        z-index: 1000;
+    }
+
+    /* Esta clase la activará JavaScript al dar clic */
+    nav.active {
+        display: block;
     }
 
     nav ul {
-        flex-direction: column;    /* Los enlaces ahora van uno abajo del otro */
-        gap: 12px;                 /* Espacio cómodo entre enlaces */
+        flex-direction: column;
+        gap: 15px;
         width: 100%;
         text-align: center;
-        padding: 10px 0;
     }
 
     nav ul li {
-        width: 100%;               /* Cada enlace ocupa todo el ancho */
+        width: 100%;
     }
 
     nav ul li a {
         display: block;
-        padding: 8px 0;
-        font-size: 14px;           /* Un pelín más pequeño para que no sature */
+        padding: 10px 0;
+        font-size: 16px;
     }
 
-    /* El último botón ("COMPRAR ENTRADAS") en el menú */
     ul li:last-child a {
-        display: inline-block;     /* No queremos que el botón rosa ocupe todo el ancho */
+        display: inline-block;
         width: auto;
-        margin-top: 5px;
-        padding: 8px 20px;
+        padding: 10px 25px;
     }
+    
+    /* ... (aquí abajo dejas los estilos del 'main' que ya tenías en el @media) ... */
+}
+.menu-hamburger {
+    display: none;
+    flex-direction: column;
+    gap: 5px;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
 
-    /* --- Ajustes del Sección Main (Lo que ya teníamos) --- */
-    main {
-        flex-direction: column;   
-        justify-content: center;  
-        align-items: center;      
-        text-align: center;       
-        padding: 40px 20px;       
-        height: auto;             
-        min-height: 100vh;        
-    }
-
-    .lado-izquierdo {
-        max-width: 100%;          
-        margin-bottom: 40px;      
-    }
-
-    main h1 {
-        font-size: 45px;          
-        line-height: 1.1;
-    }
-
-    main p {
-        font-size: 20px;          
-    }
-
-    main button {
-        padding: 15px 30px;       
-        font-size: 18px;
-    }
-
-    .lado-derecho {
-        text-align: center;       
-    }
-
-    .lado-derecho h2 {
-        font-size: 35px;          
-    }
-
-    .lado-derecho h3 {
-        font-size: 24px;          
-    }
+.menu-hamburger span {
+    display: block;
+    width: 28px;
+    height: 3px;
+    background-color: white;
+    border-radius: 2px;
 }
